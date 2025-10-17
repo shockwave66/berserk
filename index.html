@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Берсерк — фан-сайт</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Cinzel:wght@400;700&display=swap">
 </head>
-<body>
+<body id="top">
+  
+  <!-- Шапка сайту -->
   <header class="container header">
     <div class="brand">
       <div class="logo">
@@ -14,79 +17,236 @@
       </div>
       <div>
         <h1>Берсерк</h1>
-        <p>Фан-сайт українською — темна фентезі-атмосфера</p>
+        <small>Фан-сайт українською — темна фентезі-атмосфера</small>
       </div>
     </div>
 
     <nav class="nav" aria-label="Головне меню">
-      <a href="index.html">Головна</a>
-      <a href="about.html">Про аніме</a>
-      <a href="characters.html">Персонажі</a>
-      <a href="gallery.html">Галерея</a>
+      <a href="#top">Головна</a>
+      <a href="#about">Про аніме</a>
+      <a href="#characters">Персонажі</a>
+      <a href="#gallery">Галерея</a>
       <a href="contact.html">Контакти</a>
     </nav>
   </header>
 
   <main class="container">
+    
+    <!-- Головна героїчна секція -->
     <section class="hero">
       <div class="hero-card">
-        <div class="kicker">Темна сага</div>
-        <h2 class="title">«Берсерк» — історія меча, крові та волі</h2>
-        <p class="lead">Сайт — це фан-проєкт, який містить: короткі описи, персонажі, галерея та хроніка. Матеріали містять дорослу тематику — будь ласка, уважно.</p>
-
-        <div style="margin-top:18px">
-          <span class="tag">Манґа</span><span class="tag">Аніме</span><span class="tag">Темне фентезі</span>
+        <div class="hero-kicker">Темна сага</div>
+        <h2 class="hero-title">«Берсерк» — історія меча, крові та волі</h2>
+        <p class="hero-lead">Сайт створено як фан-проєкт: короткі описи, персонажі, галерея та хроніка. Матеріали містять дорослу тематику — будь ласка, уважно.</p>
+        <div class="hero-tags">
+          <span class="tag">Манґа</span>
+          <span class="tag">Аніме</span>
+          <span class="tag">Темне фентезі</span>
         </div>
-
-        
+        <div class="hero-note">Автор — фан. Всі права на оригінал належать творцям та їхнім правовласникам.</div>
       </div>
-
       <div class="hero-visual" role="img" aria-label="Головний образ">
-        <img src="images/Logo.jpg" alt="Темний воїн на тлі" />
+        <img src="images/Logo.jpg" alt="Темний воїн на тлі">
       </div>
     </section>
 
+   <!-- Хроніка подій -->
+<section class="section">
+  <h2 class="section-title">Хроніка</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <strong>1989</strong> — Кентаро Міура публікує перший розділ манґи 
+      <em>Berserk: The Prototype</em>.
+    </div>
+
+    <div class="timeline-item">
+      <strong>1990</strong> — Виходить перший том основної манґи <em>Berserk</em>.
+    </div>
+
+    <div class="timeline-item">
+      <strong>1997–1998</strong> — Виходить перше аніме “Berserk” (25 серій), 
+      що охоплює “Золоту Еру”.
+    </div>
+
+    <div class="timeline-item">
+      <strong>2012–2013</strong> — Студія Studio 4°C випускає трилогію фільмів 
+      <em>Berserk: The Golden Age Arc</em>.
+    </div>
+
+    <div class="timeline-item">
+      <strong>2016</strong> — З’являється нове CGI-аніме <em>Berserk (2016)</em>, 
+      яке продовжує історію після “Золотої Ери”.
+    </div>
+
+    <div class="timeline-item">
+      <strong>2017</strong> — Виходить другий сезон CGI-адаптації.
+    </div>
+
+    <div class="timeline-item">
+      <strong>2021</strong> — Світ втрачє автора — Кентаро Міура помирає, 
+      залишивши по собі величезний спадок.
+    </div>
+
+    <div class="timeline-item">
+      <strong>2022</strong> — Манґа продовжує виходити під керівництвом друга Міури — Коуджі Морі.
+    </div>
+
+    <div class="timeline-item">
+      <strong>2023</strong> — Виходить ремастер трилогії 
+      <em>Berserk: The Golden Age Memorial Edition</em>.
+    </div>
+
+  </div>
+</section>
+
+<!-- Досягнення -->
+<section class="section">
+  <h2 class="section-title">Досягнення</h2>
+  <div class="achievements">
+    <div class="achievement-item"><strong class="num">1.</strong> Продано понад <strong>60 мільйонів копій</strong> манґи у всьому світі.</div>
+    <div class="achievement-item"><strong class="num">2.</strong> Отримала статус однієї з найвпливовіших темних фентезі-манґ в історії.</div>
+    <div class="achievement-item"><strong class="num">3.</strong> Надихнула ігри <em>Dark Souls</em>, <em>Elden Ring</em>, <em>Final Fantasy</em> та інші.</div>
+    <div class="achievement-item"><strong class="num">4.</strong> Стала культовою завдяки своїй філософії, трагічним персонажам і стилю малюнку.</div>
+    <div class="achievement-item"><strong class="num">5.</strong> Отримала визнання критиків за глибину сюжету й моральну складність.</div>
+    <div class="achievement-item"><strong class="num">6.</strong> Культовий герой Гатс став символом незламності та боротьби з долею.</div>
+    <div class="achievement-item"><strong class="num">7.</strong> Фандом “Berserk” вважається одним із найвідданіших у світі аніме.</div>
+  </div>
+</section>
+
+
+
+    <!-- Цитати -->
     <section class="section">
-      <h2>Коротко</h2>
-      <p class="note">Берсерк — епічна манґа й аніме про воїна Гатса, його шлях, випробування та трагедії. На сайті — три головні блоки: персонажі, галерея та хроніка.</p>
+      <h4 class="section-title">Слова бійців</h4>
+      <p class="note">Мудрість, вибита на клинках долі.</p>
+      <div class="quotes-grid">
 
-      <div class="card-grid" style="margin-top:14px">
-        <article class="card">
-          <img src="images/Guts.png" alt="Гатс — образ" />
-          <h3>Гатс</h3>
-          <p>Мандрівний мечник, що пройшов через пекло. Його шлях — помста й виживання.</p>
+        <article class="quote-card">
+          <div class="quote-mark">"</div>
+          <blockquote class="quote-text">Доля — не ланцюг, що прикує тебе. Це виклик, який можна подолати силою волі.</blockquote>
+          <cite class="quote-author">— Чорний Мечник</cite>
         </article>
 
-        <article class="card">
-          <img src="images/Griffith.jpg" alt="Ґріффіт — образ" />
-          <h3>Ґріффіт</h3>
-          <p>Харизматичний лідер із великими амбіціями. Його рішення змінюють долі.</p>
+        <article class="quote-card">
+          <div class="quote-mark">"</div>
+          <blockquote class="quote-text">Мрії без жертв — лише ілюзії. Справжня ціна величі завжди виміряна кров'ю.</blockquote>
+          <cite class="quote-author">— Білий Яструб</cite>
         </article>
 
-        <article class="card">
-          <img src="images/Kaska.jpg" alt="Каска — образ" />
-          <h3>Каска</h3>
-          <p>Колишній командир, чия історія сповнена втрат і надії.</p>
+        <article class="quote-card">
+          <div class="quote-mark">"</div>
+          <blockquote class="quote-text">У темряві найбільше цінується не світло надії, а сила продовжувати йти вперед.</blockquote>
+          <cite class="quote-author">— Мандрівник у темряві</cite>
         </article>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Хроніка</h2>
-      <div class="timeline">
-        <div class="timeline-item"><strong>1989</strong> — Початок манґи (перша публікація).</div>
-        <div class="timeline-item"><strong>1997</strong> — Перші аніме-адаптації.</div>
-        <div class="timeline-item"><strong>2016</strong> — Оновлені серії та ремастери.</div>
+    <!-- Про аніме -->
+    <aside id="about" class="section">
+      <h5 class="section-title">Про «Берсерк»</h5>
+      <p class="note">«Берсерк» — це манґа, створена <mark><em>Кентаро Міурою</em></mark>. Історія відома своєю деталізованою графікою, похмурою атмосферою та непростими темами: помста, дружба, зрада, людська природа. Цей сайт — лише фанатська сторінка українською.</p>
+      
+      <h6 class="section-subtitle">Теми та мотиви</h6>
+      <ul class="about-list">
+        <li>Пошук сенсу і помста</li>
+        <li>Долі, що змінюються вибором</li>
+        <li>Темні сили й людські слабкості</li>
+      </ul>
+    </aside>
+
+    <hr>
+
+    <!-- Персонажі -->
+    <section id="characters" class="section">
+      <h2 class="section-title">Головні персонажі</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img src="images/Guts.png" alt="Гатс">
+          <h3 class="card-title">Гатс</h3>
+          <p class="card-text">Сильний воїн, майстер меча. Висока витривалість, жага до життя попри трагедію.</p>
+        </article>
+        <article class="card">
+          <img src="images/Griffith.jpg" alt="Ґріффіт">
+          <h3 class="card-title">Ґріффіт</h3>
+          <p class="card-text">Харизматичний лідер з великими амбіціями. Його шлях неоднозначний.</p>
+        </article>
+        <article class="card">
+          <img src="images/Kaska.jpg" alt="Каска">
+          <h3 class="card-title">Каска</h3>
+          <p class="card-text">Колишня командирка та один із ключових персонажів. Її історія пов'язана з багатьма подіями.</p>
+        </article>
+      </div>
+    
+      <h2 class="section-subtitle">Додаткові фігури</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img src="images/Judeau.jpg" alt="Юдо">
+          <h3 class="card-title">Юдо</h3>
+          <p class="card-text">Спритний та проникливий член Загону Яструба, майстер метання ножів. Був одним із найближчих друзів Гатса в загоні, відомий своїм спокійним характером.</p>
+        </article>
+        <article class="card">
+          <img src="images/Ubik.jpg" alt="Убік">
+          <h3 class="card-title">Убік</h3>
+          <p class="card-text">Член Руки Бога, хитрий і балакучий архідемон. Маніпулює емоціями та спогадами, підштовхуючи людей до відчаю та жертвоприношення.</p>
+        </article>
+        <article class="card">
+          <img src="images/Void.jpg" alt="Войд">
+          <h3 class="card-title">Войд</h3>
+          <p class="card-text">Лідер Руки Бога, філософськи налаштована та жорстока істота. Саме він таврує жертв під час ритуалів. Втілює ідею неминучої долі та причинності.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Останні зображення</h2>
+    <hr>
+
+ <!-- Галерея -->
+    <section id="gallery" class="section">
+      <h2 class="section-title">Галерея образів</h2>
+      <p class="note">Колекція атмосферних зображень для настрою.</p>
+      
       <div class="gallery-grid" style="margin-top:12px">
-        <img src="images/atmosphere_3.jpg" alt="Атмосфера 1" />
-        <img src="images/atmosphere_1.jpg" alt="Атмосфера 2" />
-        <img src="images/atmosphere_2.jpg" alt="Атмосфера 3" />
-        <img src="images/atmosphere_4.jpg" alt="Атмосфера 4" />
+        
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/1.jpg" alt="Затемнення" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Затемнення</figcaption>
+        </figure>
+
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/2.jpg" alt="Гатс біля вогнища" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Переродження</figcaption>
+        </figure>
+
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/3.jpg" alt="Море душ" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Страх "Зодд"</figcaption>
+        </figure>
+
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/4.jpg" alt="Дерево повішених" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Де моя медаль</figcaption>
+        </figure>
+
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/8.jpg" alt="Логотип Берсерка" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Самотність</figcaption>
+        </figure>
+
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/5.jpg" alt="Гріффіт" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Забороненний фрукт</figcaption>
+        </figure>
+
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/6.jpg" alt="Гатс" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Нездійсненна мрія</figcaption>
+        </figure>
+        
+        <figure class="card" style="padding: 10px; margin: 0;">
+          <img src="images/7.jpg" alt="Каска" class="gallery-8photos">
+          <figcaption class="note" style="text-align: center; margin-top: 8px;">Звільнення</figcaption>
+        </figure>
+
       </div>
     </section>
 

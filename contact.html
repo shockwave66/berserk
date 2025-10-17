@@ -1,115 +1,262 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Контакти — Берсерк</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Cinzel:wght@400;700&display=swap">
 </head>
 <body>
+  
+  <!-- Шапка сайту -->
   <header class="container header">
     <div class="brand">
       <div class="logo">
         <img src="images/brand_symbol.jpg" alt="Тавро Берсерка" width="40">
       </div>
-      <div><h1>Берсерк</h1><p>Контакти / Зв'язок</p></div>
+      <div>
+        <h1>Берсерк</h1>
+        <p>Контакти / Зв'язок</p>
+      </div>
     </div>
 
     <nav class="nav">
       <a href="index.html">Головна</a>
-      <a href="about.html">Про аніме</a>
-      <a href="characters.html">Персонажі</a>
-      <a href="gallery.html">Галерея</a>
+      <a href="index.html#about">Про аніме</a>
+      <a href="index.html#characters">Персонажі</a>
+      <a href="index.html#gallery">Галерея</a>
       <a href="contact.html">Контакти</a>
     </nav>
   </header>
 
   <main class="container">
 
+    <!-- Вступна секція -->
     <section class="section">
-      <h2>Зв'язок із загоном</h2>
-      <p class="note">Оберіть потрібну дію, щоб зв'язатися з нами або приєднатися до боротьби.</p>
-      <div style="margin-top: 18px;">
-        <a href="#forms" class="tag" style="text-decoration: none;">Заповнити форму</a>
-        <a href="#contacts" class="tag" style="text-decoration: none;">Знайти табір</a>
+      <h2 class="section-title">Зв'язок із загоном</h2>
+      <p class="contact-intro note">Оберіть потрібну дію, щоб зв'язатися з нами або приєднатися до боротьби.</p>
+      <div class="contact-actions">
+        <a href="#forms" class="tag">Заповнити форму</a>
+        <a href="#contacts" class="tag">Знайти табір</a>
       </div>
     </section>
 
-    <section id="forms" class="section">
-      <h2>Форми для зв'язку</h2>
-      
-      <div class="card-grid">
-        <!-- Форма для приєднання -->
-        <article class="card">
-          <h3>Приєднатися до загону</h3>
-          <form style="margin-top: 12px;">
-            <fieldset style="border: none; padding: 0;">
-              <p class="note" style="margin-bottom: 10px;">Вкажіть свої дані, щоб стати частиною нашої справи.</p>
-              
-              <label for="alias" class="note">Ім'я або прізвисько:</label>
-              <input type="text" id="alias" name="alias" required placeholder="Чорний мечник" style="width: 100%; padding: 8px; background: var(--bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; margin-top: 4px;">
-
-              <label for="skill" class="note" style="display: block; margin-top: 10px;">Основна навичка:</label>
-              <select id="skill" name="skill" style="width: 100%; padding: 8px; background: var(--bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; margin-top: 4px;">
-                <option value="">Обрати...</option>
-                <option value="swordsman">Мечник</option>
-                <option value="strategist">Лучник</option>
-                <option value="healer">Цілитель</option>
-              </select>
-
-              <label style="display: flex; align-items: center; margin-top: 12px;" class="note">
-                <input type="checkbox" required>
-                <span style="margin-left: 8px;">Я готовий до боротьби.</span>
-              </label>
-
-              <button type="submit" style="width: 100%; padding: 10px; margin-top: 14px; background: var(--accent); border: none; border-radius: 4px; color: #fff; font-weight: bold; cursor: pointer;">Надіслати запит</button>
-            </fieldset>
-          </form>
+    <!-- Ключова історія -->
+    <section class="section">
+      <h2 class="section-title">Ключова Історія</h2>
+      <p class="note">Розповідь про долі, що переплелися у полум'ї амбіцій та темряви.</p>
+      <div class="story-grid">
+        
+        <article class="story-card">
+          <h3 class="story-title">Шлях Меча та Яструба</h3>
+          <p class="story-text">
+            <img src="images/9.jpg" alt="Тавро" class="story-brand-image">
+            Історія «Берсерка» — це похмура сага про найманця Гатса, відомого як Чорний Мечник. Його життя назавжди змінилося після зустрічі з харизматичним лідером Загону Яструба, Гріффітом. Їхня дружба, що загартувалася в незліченних битвах, вела загін до вершин слави. 
+            Однак непомірні амбіції Гріффіта призвели до жахливої зради, що занурила світ у темряву та прирекла Гатса на вічну боротьбу з демонічними силами. В центрі історії — незламна воля людини, що йде проти самої долі, пошук помсти та спроба захистити те небагато, що залишилося дорогим у зруйнованому світі.
+          </p>
         </article>
         
-        <!-- Форма зворотнього зв'язку -->
-        <article class="card">
-          <h3>Надіслати ворона (повідомлення)</h3>
-          <form style="margin-top: 12px;">
-            <fieldset style="border: none; padding: 0;">
-                <p class="note" style="margin-bottom: 10px;">Якщо маєте інформацію, побажання або зауваження.</p>
-
-                <label for="email" class="note">Ваш e-mail:</label>
-                <input type="email" id="email" name="email" required placeholder="berserk.fan@example.com" style="width: 100%; padding: 8px; background: var(--bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; margin-top: 4px;">
-
-                <label for="message" class="note" style="display: block; margin-top: 10px;">Повідомлення:</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Текст вашого послання..." style="width: 100%; padding: 8px; background: var(--bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; color: #fff; margin-top: 4px; resize: vertical;"></textarea>
-                
-                <button type="submit" style="width: 100%; padding: 10px; margin-top: 14px; background: var(--accent); border: none; border-radius: 4px; color: #fff; font-weight: bold; cursor: pointer;">Відправити</button>
-            </fieldset>
-          </form>
+        <article class="story-card">
+          <h3 class="story-title">Фрагменти долі</h3>
+          <div class="photos-section">
+            <img src="images/atmosphere_1.jpg" alt="Колаж 1" class="stacked-photo stacked-photo-1">
+            <img src="images/atmosphere_2.jpg" alt="Колаж 2" class="stacked-photo stacked-photo-2">
+            <img src="images/atmosphere_3.jpg" alt="Колаж 3" class="stacked-photo stacked-photo-3">
+          </div>
         </article>
+
       </div>
     </section>
 
-    <section id="contacts" class="section">
-        <h2>Координати табору</h2>
-        <div class="card-grid">
-            <article class="card">
-                <h3>Загальний зв'язок</h3>
-                <p class="note"><strong>Email:</strong> berserk@gmail.com</p>
-                <p class="note"><strong>Phone:</strong> +380 66 123 45 67.</p>
-            </article>
-            <article class="card">
-                <h3>Наша локація</h3>
-                <address style="font-style: normal;">
-                  <p class="note">Табір "Чорного Мечника",<br>
-                  Десь у темних землях Мідленду.</p>
-                  <div class="map" style="margin-top: 10px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-                    <iframe title="Карта" src="https://maps.google.com/maps?q=Kyiv&t=&z=13&ie=UTF8&iwloc=&output=embed" aria-label="Карта" loading="lazy" style="width: 100%; height: 200px; border: 0;"></iframe>
-                  </div>
-                </address>
-            </article>
+    <hr>
+
+        
+        <!-- Форма приєднання -->
+        <!-- СЕКЦІЯ РЕЄСТРАЦІЇ -->
+<section id="registration" class="section">
+  <h2>Присяга Загону Яструба</h2>
+  
+  <article class="card">
+    <h3>Вступ до лав</h3>
+    <p class="note form-spacing-bottom">Заповніть сувій, щоб стати частиною нашої справи. Поля, позначені тавром (*), є обов'язковими.</p>
+
+    <form action="#" method="post">
+      <fieldset class="form-fieldset">
+
+        <!-- Прізвисько та Email -->
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="nickname" class="form-label">Прізвисько / Позивний <span class="form-required">*</span></label>
+            <input type="text" id="nickname" name="nickname" required minlength="3" placeholder="Чорний мечник" class="form-input">
+          </div>
+          <div class="form-field">
+            <label for="email" class="form-label">Поштовий ворон (E-mail) <span class="form-required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="fan@example.com" class="form-input">
+          </div>
         </div>
-    </section>
+
+        <!-- Пароль та Підтвердження пароля -->
+        <div class="form-grid form-spacing-top">
+          <div class="form-field">
+            <label for="password" class="form-label">Секретний код / Пароль <span class="form-required">*</span></label>
+            <input type="password" id="password" name="password" required minlength="8" placeholder="Мінімум 8 символів" 
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-input">
+            <p class="form-hint">Має містити великі, малі літери та цифри.</p>
+          </div>
+          <div class="form-field">
+            <label for="confirm-password" class="form-label">Повторіть код <span class="form-required">*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Повторіть ваш код" class="form-input">
+          </div>
+        </div>
+
+        <!-- Дата народження та Походження -->
+        <div class="form-grid form-spacing-top">
+          <div class="form-field">
+            <label for="birthdate" class="form-label">Дата народження</label>
+            <input type="date" id="birthdate" name="birthdate" min="1950-01-01" class="form-input">
+          </div>
+          <div class="form-field">
+            <label for="origin" class="form-label">Походження / Рідні землі</label>
+            <select id="origin" name="origin" class="form-select">
+              <option value="">Обрати землі...</option>
+              <option value="midland">Мідленд</option>
+              <option value="tudor">Тюдор</option>
+              <option value="kushan">Кушанська імперія</option>
+              <option value="elfhelm">Ельфхельм</option>
+              <option value="other">Інші землі</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Умови та кнопка -->
+        <div class="form-spacing-top">
+          <label class="form-checkbox-label">
+            <input type="checkbox" required class="form-checkbox">
+            <span>Я присягаю на вірність Яструбу та погоджуюсь з усіма ризиками <span class="form-required">*</span></span>
+          </label>
+
+          <button type="submit" class="form-submit">Стати до лав</button>
+        </div>
+      </fieldset>
+    </form>
+  </article>
+</section>
+        
+       <!-- Форма повідомлення -->
+<section id="forms" class="section">
+  <article class="card">
+    <h3 class="card-title">Надіслати ворона (повідомлення)</h3>
+    <form>
+      <fieldset class="form-fieldset">
+        <p class="note form-spacing-bottom">Якщо маєте інформацію, побажання або зауваження.</p>
+        
+        <div class="form-field">
+          <label for="message-email" class="form-label">Ваш e-mail:</label>
+          <input type="email" id="message-email" name="email" required placeholder="berserk.fan@example.com" class="form-input">
+        </div>
+        
+        <div class="form-field form-spacing-top">
+          <label for="message" class="form-label">Повідомлення:</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Текст вашого послання..." class="form-textarea"></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit">Відправити</button>
+      </fieldset>
+    </form>
+  </article>
+</section>
+
+<hr>
+
+
+    <!-- Координати табору -->
+<section id="contacts" class="section">
+  <h2 class="section-title">Координати табору</h2>
+  <div class="card-grid">
+    
+    <!-- Загальний зв'язок -->
+    <article class="card">
+      <h3 class="card-title">Загальний зв'язок</h3>
+      <p class="contact-info"><strong>Email:</strong> berserk@gmail.com</p>
+      <p class="contact-info"><strong>Phone:</strong> +380 66 123 45 67</p>
+    </article>
+    
+    <!-- Локація з картою -->
+    <article class="card">
+      <h3 class="card-title">Наша локація</h3>
+      <address class="contact-address">
+        <p class="note">Табір "Чорного Мечника",<br>
+        Десь у темних землях Мідленду.</p>
+        <div class="contact-map">
+          <iframe 
+            title="Карта" 
+            src="https://maps.google.com/maps?q=Kyiv&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+            aria-label="Карта" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </address>
+    </article>
+    
+  </div>
+</section>
+
+<!-- Зовнішні ресурси -->
+<section class="section">
+  <h2 class="section-title">Зовнішні ресурси</h2>
+  <p class="note">Корисні посилання для прихильників "Берсерка"</p>
+  <div class="card-grid">
+    
+    <!-- Офіційні ресурси -->
+    <article class="card">
+      <h3 class="card-title">Офіційні джерела</h3>
+      <ul class="resource-list">
+        <li><a href="https://www.hakusensha.co.jp/berserk/" target="_blank" rel="noopener noreferrer" class="resource-link">Офіційний сайт манґи</a></li>
+        <li><a href="https://www.younganimaljapan.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Young Animal Magazine</a></li>
+        <li><a href="https://berserk-anime.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Офіційний сайт аніме</a></li>
+      </ul>
+    </article>
+    
+    <!-- Фан-спільноти -->
+    <article class="card">
+      <h3 class="card-title">Фан-спільноти</h3>
+      <ul class="resource-list">
+        <li><a href="https://www.reddit.com/r/Berserk/" target="_blank" rel="noopener noreferrer" class="resource-link">Reddit: r/Berserk</a></li>
+        <li><a href="https://www.skullknight.net/" target="_blank" rel="noopener noreferrer" class="resource-link">SkullKnight.net Forum</a></li>
+        <li><a href="https://discord.gg/berserk" target="_blank" rel="noopener noreferrer" class="resource-link">Discord спільнота</a></li>
+      </ul>
+    </article>
+    
+    <!-- Де читати/дивитися -->
+    <article class="card">
+      <h3 class="card-title">Де читати/дивитися</h3>
+      <ul class="resource-list">
+        <li><a href="https://www.crunchyroll.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Crunchyroll (аніме)</a></li>
+        <li><a href="https://www.darkhorse.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Dark Horse Comics (манґа)</a></li>
+        <li><a href="https://www.bookwalker.jp/" target="_blank" rel="noopener noreferrer" class="resource-link">BookWalker (цифрові томи)</a></li>
+      </ul>
+    </article>
+    
+    <!-- Додаткова інформація -->
+    <article class="card">
+      <h3 class="card-title">Додаткова інформація</h3>
+      <ul class="resource-list">
+        <li><a href="https://myanimelist.net/anime/33/Kenpuu_Denki_Berserk" target="_blank" rel="noopener noreferrer" class="resource-link">MyAnimeList</a></li>
+        <li><a href="https://berserk.fandom.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Berserk Wiki</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="resource-link">YouTube (аналіз та огляди)</a></li>
+      </ul>
+    </article>
+    
+  </div>
+</section>
 
   </main>
 
-  <footer class="footer">Повернутися на <a href="index.html" style="color: var(--accent);">Головну</a></footer>
+  <!-- Підвал -->
+  <footer class="footer">
+    Повернутися на <a href="index.html">Головну</a>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,1116 @@
+/* ========================================
+   ЗМІННІ ТЕМИ
+   ======================================== */
+:root {
+  --bg: #070609;
+  --panel: #0e0e0f;
+  --accent: #b90f0f;
+  --muted: #9aa0a6;
+  --text-primary: #e7e7e7;
+  --text-secondary: #cfcfcf;
+  --glass: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.03);
+}
+
+/* ========================================
+   БАЗОВІ СТИЛІ
+   ======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Unbounded', 'Cinzel', system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 80px;
+  padding-top: 50px;
+}
+
+/* Фоновий шар з розмиттям */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(185, 15, 15, 0.06), transparent 8%),
+    radial-gradient(800px 400px at 90% 90%, rgba(10, 10, 10, 0.6), transparent 15%),
+    linear-gradient(180deg, rgba(5, 5, 6, 0.8) 0%, rgba(10, 10, 10, 0.9) 60%),
+    url('images/phone.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  transform: scale(1.05);
+}
+
+/* ========================================
+   КОНТЕЙНЕР
+   ======================================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+.container hr {
+    margin: 40px 0;
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #960303, transparent);
+    border-radius: 2px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  margin: 0 auto;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+}
+
+.brand small {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1b1b1b, #2b2b2b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.02) inset;
+  border: 1px solid var(--border);
+}
+
+.logo img {
+  border-radius: 6px;
+}
+
+/* ========================================
+   НАВІГАЦІЯ
+   ======================================== */
+.nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.02);
+  transform: translateY(-2px);
+}
+
+[id] {
+    scroll-margin-top: 100px;
+}
+
+/* ========================================
+   HERO СЕКЦІЯ
+   ======================================== */
+.hero {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-card {
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.03));
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hero-kicker {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+.hero-title {
+  font-size: 38px;
+  margin: 8px 0 6px;
+  line-height: 1.02;
+  font-weight: 900;
+  text-shadow: 0 6px 30px rgba(185, 15, 15, 0.06);
+}
+
+.hero-lead {
+  color: var(--text-secondary);
+  max-width: 62ch;
+}
+
+.hero-tags {
+  margin-top: 18px;
+}
+
+.hero-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.hero-visual {
+  height: 360px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+  transition: transform 0.8s ease;
+}
+
+.hero-visual:hover img {
+  transform: scale(1.07);
+}
+
+/* ========================================
+   СЕКЦІЇ
+   ======================================== */
+  .aside,
+  .section {
+  margin-top: 34px;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.section-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  margin: 30px 0 8px;
+}
+
+/* ========================================
+   TIMELINE
+   ======================================== */
+.timeline {
+  border-left: 3px solid rgba(185, 15, 15, 0.22);
+  padding-left: 18px;
+}
+
+.timeline-item {
+  margin: 18px 0;
+  position: relative;
+}
+
+.timeline-item:before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  left: -27px;
+  top: 6px;
+  box-shadow: 0 4px 10px rgba(185, 15, 15, 0.12);
+}
+
+/* ========================================
+   ABOUT СЕКЦІЯ
+   ======================================== */
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.about-list li {
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-list li:before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ========================================
+   ЦИТАТИ
+   ======================================== */
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.quote-card {
+  /* background: var(--panel); */
+  background: linear-gradient(135deg, var(--panel) 0%, rgba(185, 15, 15, 0.05) 50%, var(--panel) 100%);
+  background-size: 200% 200%;
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+  border-left: 3px solid var(--accent);
+  animation: gradientShift 5s ease infinite;
+}
+
+.quote-mark {
+  font-size: 64px;
+  font-family: 'Cinzel', serif;
+  color: var(--accent);
+  opacity: 0.15;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.quote-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0 0 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================
+   КАРТКОВА СІТКА
+   ======================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-title {
+  margin: 10px 0 4px;
+  font-size: 16px;
+}
+
+.card-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ========================================
+   ГАЛЕРЕЯ
+   ======================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.gallery-8photos {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  border-radius: 8px;
+}
+
+/* ========================================
+   КОНТАКТНА СТОРІНКА
+   ======================================== */
+.contact-intro {
+  margin-bottom: 10px;
+}
+
+.contact-actions {
+  margin-top: 18px;
+}
+
+.contact-actions .tag {
+  text-decoration: none;
+}
+
+/* Story Section */
+.story-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.story-card {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.story-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.story-text {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.story-brand-image {
+  float: left;
+  width: 120px;
+  margin: 4px 20px 10px 0;
+  border-radius: 4px;
+}
+
+/* Photos Section */
+.photos-section {
+  position: relative;
+  width: 250px;
+  height: 225px;
+  margin-top: 10px;
+}
+
+.stacked-photo {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.stacked-photo-1 {
+  top: 0;
+  left: 10%;
+  transform: rotate(4deg);
+  z-index: 1;
+}
+
+.stacked-photo-2 {
+  top: 80px;
+  left: 0;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.stacked-photo-3 {
+  top: 150px;
+  left: 20%;
+  transform: rotate(2deg);
+  z-index: 3;
+}
+
+/* Forms */
+.form-container {
+  margin-top: 12px;
+}
+
+.form-fieldset {
+  border: none;
+  padding: 0;
+}
+
+.form-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 8px;
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 4px;
+  font-family: inherit;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.form-checkbox-label input {
+  margin-right: 8px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 10px;
+  margin-top: 14px;
+  background: var(--accent);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.form-submit:hover {
+  background: #d41010;
+}
+
+/* Contacts */
+.contact-info {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 8px 0;
+}
+
+.contact-address {
+  font-style: normal;
+}
+
+.contact-map {
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+}
+
+/* ========================================
+   ДОПОМІЖНІ КЛАСИ
+   ======================================== */
+.tag {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.note mark {
+  background: rgb(150, 3, 3)
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  margin-top: 40px;
+  padding: 22px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   АДАПТИВНІСТЬ
+   ======================================== */
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr 320px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hero-visual {
+    height: 260px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-brand-image {
+    float: none;
+    display: block;
+    margin: 0 auto 10px;
+  }
+}
+
+/* Анімації */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================================
+   FORMS
+   ======================================== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.form-required {
+  color: var(--accent);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 8px;
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.form-input[type="date"] {
+  padding: 7px;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-hint {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.form-checkbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: var(--accent);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.form-submit:hover {
+  opacity: 0.9;
+}
+
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-spacing-top {
+  margin-top: 15px;
+}
+
+.form-spacing-bottom {
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   FORM VALIDATION
+   ======================================== */
+
+/* Базові стилі для input/textarea/select */
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 8px;
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Звичайний фокус */
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* Валідні поля (показуємо тільки після введення тексту) */
+.form-input:valid:not(:placeholder-shown),
+.form-textarea:valid:not(:placeholder-shown) {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.1);
+}
+
+/* Невалідні поля (показуємо тільки після введення тексту і якщо не в фокусі) */
+.form-input:invalid:not(:placeholder-shown):not(:focus),
+.form-textarea:invalid:not(:placeholder-shown):not(:focus) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+}
+
+/* Фокус на валідному полі */
+.form-input:valid:focus,
+.form-textarea:valid:focus {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+  outline: none;
+}
+
+/* Фокус на невалідному полі */
+.form-input:invalid:focus,
+.form-textarea:invalid:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+  outline: none;
+}
+
+/* Select завжди валідний після вибору */
+.form-select:not([value=""]):valid {
+  border-color: #4ade80;
+}
+
+/* Checkbox валідація */
+.form-checkbox:required:invalid {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  opacity: 0.7;
+}
+
+.form-checkbox:required:valid {
+  outline: 2px solid #4ade80;
+  outline-offset: 2px;
+}
+
+.form-checkbox:checked {
+  opacity: 1;
+}
+
+/* Візуальні індикатори для required полів */
+.form-input:required,
+.form-textarea:required,
+.form-select:required {
+  background-image: linear-gradient(to right, rgba(220, 38, 38, 0.05) 0%, transparent 8px);
+}
+
+.form-input:required:valid:not(:placeholder-shown),
+.form-textarea:required:valid:not(:placeholder-shown) {
+  background-image: linear-gradient(to right, rgba(74, 222, 128, 0.05) 0%, transparent 8px);
+}
+
+/* Іконки валідації через псевдоелементи (опціонально) */
+.form-field {
+  position: relative;
+}
+
+/* Зелена галочка для валідних полів */
+.form-input:valid:not(:placeholder-shown) ~ .form-icon::after,
+.form-textarea:valid:not(:placeholder-shown) ~ .form-icon::after {
+  content: "✓";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4ade80;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Червоний хрестик для невалідних полів */
+.form-input:invalid:not(:placeholder-shown):not(:focus) ~ .form-icon::after,
+.form-textarea:invalid:not(:placeholder-shown):not(:focus) ~ .form-icon::after {
+  content: "✕";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Повідомлення про помилки */
+.form-error {
+  display: none;
+  color: var(--accent);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.form-input:invalid:not(:placeholder-shown) ~ .form-error,
+.form-textarea:invalid:not(:placeholder-shown) ~ .form-error {
+  display: block;
+}
+
+/* Анімація появи повідомлення */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-input:invalid:not(:placeholder-shown) ~ .form-error,
+.form-textarea:invalid:not(:placeholder-shown) ~ .form-error {
+  animation: fadeIn 0.3s ease;
+}
+
+/* ========================================
+   BUTTONS ACTIVE STATE
+   ======================================== */
+
+/* Кнопка submit */
+.form-submit:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Якщо є інші кнопки */
+button:active,
+.button:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+/* ========================================
+   LINKS ACTIVE STATE
+   ======================================== */
+
+/* Навігаційні посилання */
+.nav a:active {
+  color: var(--accent);
+  transform: scale(0.95);
+}
+
+/* Теги */
+.tag:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Посилання в тексті */
+a:active {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+/* ========================================
+   FORM ELEMENTS ACTIVE STATE
+   ======================================== */
+
+/* Input поля при натисканні */
+.form-input:active,
+.form-textarea:active,
+.form-select:active {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Checkbox */
+.form-checkbox:active {
+  transform: scale(0.9);
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.achievement-item {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.num {
+  color: rgb(215, 11, 11);
+  margin-right: 4px;
+}
+
+/* ========================================
+   RESOURCE LINKS
+   ======================================== */
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resource-list li {
+  margin: 0;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Іконка стрілки */
+.resource-link::after {
+  content: "→";
+  margin-left: auto;
+  padding-left: 12px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Hover стан */
+.resource-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.resource-link:hover::after {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Focus стан */
+.resource-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Active стан */
+.resource-link:active {
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
+}
+
+/* Ефект світіння при наведенні */
+.resource-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.resource-link:hover::before {
+  left: 100%;
+}
+
+/* Адаптив для маленьких екранів */
+@media (max-width: 768px) {
+  .resource-link {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
